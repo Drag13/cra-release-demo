@@ -2,14 +2,23 @@ import "./App.css";
 
 const chiefs = [
   {
-    img: `${process.env.PUBLIC_URL}/img/chief-cook-img/cook_1.png`,
+    img: `/img/chief-cook-img/cook_1.png`,
+  },
+  {
+    img: `/img/chief-cook-img/cook_1.png`,
   },
 ];
+
+function AppImage({ src, alt }) {
+  return <img src={`${process.env.PUBLIC_URL}${src}`} alt={alt} />;
+}
 
 function App() {
   return (
     <div className="App">
-      <img src={chiefs[0].img} alt="demo" />
+      {chiefs.map(({ src }, i) => (
+        <AppImage src={src} alt={"demo" + i} />
+      ))}
     </div>
   );
 }

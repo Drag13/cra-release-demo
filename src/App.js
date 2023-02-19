@@ -2,7 +2,7 @@ import "./App.css";
 
 const chiefs = [
   {
-    img: "%PUBLIC_URL%/img/chief-cook-img/cook_1.png",
+    img: `${process.env.PUBLIC_URL}/img/chief-cook-img/cook_1.png`,
   },
 ];
 

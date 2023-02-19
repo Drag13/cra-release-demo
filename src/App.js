@@ -16,8 +16,8 @@ function AppImage({ src, alt }) {
 function App() {
   return (
     <div className="App">
-      {chiefs.map(({ src }, i) => (
-        <AppImage src={src} alt={"demo" + i} />
+      {chiefs.map(({ img }, i) => (
+        <AppImage key={i} src={img} alt={"demo" + i} />
       ))}
     </div>
   );
